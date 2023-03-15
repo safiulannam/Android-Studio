@@ -6,25 +6,22 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
-class LoginActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_register)
 
         val editTextUsername = findViewById<EditText>(R.id.editTextUsername)
         val editTextPassword = findViewById<EditText>(R.id.editTextPassword)
-        val buttonLogin = findViewById<Button>(R.id.buttonLogin)
+        val buttonRegister = findViewById<Button>(R.id.buttonRegister)
 
-        val username = intent.getStringExtra("USERNAME")
-        val password = intent.getStringExtra("PASSWORD")
-
-        editTextUsername.setText(username)
-        editTextPassword.setText(password)
-
-        buttonLogin.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        buttonRegister.setOnClickListener {
+            val username = editTextUsername.text.toString()
+            val password = editTextPassword.text.toString()
+            val intent = Intent(this, LoginActivity::class.java)
             intent.putExtra("USERNAME", username)
+            intent.putExtra("PASSWORD", password)
             startActivity(intent)
-            }
         }
     }
+}

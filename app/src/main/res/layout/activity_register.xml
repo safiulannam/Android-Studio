@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical">
+        android:layout_marginEnd="20dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -27,11 +26,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Login"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Registrasi"
                     android:textColor="@color/purple_700"
-                    android:layout_weight="1"/>
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </FrameLayout>
@@ -39,36 +38,51 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="USERNAME"
-            android:textSize="15sp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
+            android:text="Username"
             android:textColor="@color/purple_500"
-            />
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextNIM"
+            android:id="@+id/editTextUsername"
             android:layout_width="335dp"
             android:layout_height="48dp"
             android:hint="Masukan Username Anda" />
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
-            android:textSize="15sp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
+            android:text="Password"
             android:textColor="@color/purple_500"
-            />
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextPassword"
             android:layout_width="337dp"
             android:layout_height="48dp"
+            android:layout_below="@+id/editTextUsername"
             android:hint="Masukan Password"
-            android:inputType="textPassword"
-            android:layout_below="@+id/editTextUsername"/>
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Konfirmasi Password"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="337dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/editTextUsername"
+            android:hint="Masukan Konfirmasi Password"
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
@@ -84,7 +98,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lupa Password?"
+                android:text="Sudah Punya Akun?"
                 android:textSize="15sp"
                 android:layout_weight="1"
                 android:layout_marginTop="25dp"
@@ -93,12 +107,12 @@
                 />
 
             <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonRegister"
                 android:layout_width="300dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="25dp"
                 android:layout_weight="1"
-                android:text="Login"
+                android:text="Register"
                 android:layout_below="@+id/editTextPassword"
                 android:textSize="20sp"
                 android:textStyle="bold" />
