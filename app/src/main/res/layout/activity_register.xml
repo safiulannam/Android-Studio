@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -30,7 +31,9 @@
                     android:text="Registrasi"
                     android:textColor="@color/purple_700"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"/>
 
             </LinearLayout>
         </FrameLayout>
@@ -42,13 +45,36 @@
             android:text="Username"
             android:textColor="@color/purple_500"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
 
         <EditText
-            android:id="@+id/editTextUsername"
+            android:id="@+id/etName"
             android:layout_width="335dp"
             android:layout_height="48dp"
-            android:hint="Masukan Username Anda" />
+            android:hint="Masukan Username Anda"
+            android:inputType="textPersonName"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="337dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/etName"
+            android:hint="Masukan Email"
+            android:inputType="textEmailAddress"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
 
@@ -58,15 +84,19 @@
             android:text="Password"
             android:textColor="@color/purple_500"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/etPassword"
             android:layout_width="337dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/editTextUsername"
             android:hint="Masukan Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_below="@+id/etEmail"
+            android:layout_centerHorizontal="true"/>
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,14 +105,17 @@
             android:text="Konfirmasi Password"
             android:textColor="@color/purple_500"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
 
         <EditText
+            android:id="@+id/etConfirmPassword"
             android:layout_width="337dp"
             android:layout_height="48dp"
-            android:layout_below="@+id/editTextUsername"
+            android:layout_below="@+id/etPassword"
             android:hint="Masukan Konfirmasi Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_centerHorizontal="true"/>
 
     </LinearLayout>
 
@@ -107,13 +140,13 @@
                 />
 
             <Button
-                android:id="@+id/buttonRegister"
+                android:id="@+id/btnRegister"
                 android:layout_width="300dp"
                 android:layout_height="65dp"
                 android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:text="Register"
-                android:layout_below="@+id/editTextPassword"
+                android:layout_below="@+id/etPassword"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

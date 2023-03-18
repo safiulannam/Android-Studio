@@ -11,20 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MuhammadSafiulAnnam"
         tools:targetApi="31">
-
         <activity
-            android:name=".RegisterActivity">
-        </activity>
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
-            android:name=".LoginActivity">
-        </activity>
-        <activity
-            android:name=".MainActivity">
-        </activity>
-        <activity android:name=".SplashActivity"
-            android:theme="@style/Theme.MuhammadSafiulAnnam"
+            android:name=".SplashActivity"
+            android:exported="true"
             android:noHistory="true"
-            android:exported="true">
+            android:theme="@style/Theme.MuhammadSafiulAnnam">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,4 +29,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
